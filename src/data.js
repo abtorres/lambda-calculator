@@ -32,4 +32,4 @@ const operators = [
 const specials = ["C", "+/-", "%"];
 
 
-export default numbers;
+export default {numbers, operators, specials};
