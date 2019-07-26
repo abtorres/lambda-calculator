@@ -1,0 +1,9 @@
+.display {
+    color: white;
+    background-color: black;
+    border: none;
+    height: 60px;
+    border-radius: 50px;
+    margin: 5px;
+    text-align: center;
+}
