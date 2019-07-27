@@ -5,7 +5,7 @@
     width: 60px;
     background-color: darkblue;
     color: white;
-    margin: 10px 10px;
+    margin: 10px 0px 10px 20px;
 }
 
 .zero {
@@ -15,5 +15,5 @@
     border-radius: 30px;
     background-color: teal;
     color: white;
-    margin: 10px;
+    margin: 10px 0px 10px 20px;
 }
