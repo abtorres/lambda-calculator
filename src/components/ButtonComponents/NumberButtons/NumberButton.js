@@ -1,11 +1,12 @@
 import React from "react";
 import './Numbers.css';
 
-const NumberButton = (props) => {
-  if(props.number === '0') {
+const NumberButton = (setDisplay) => {
+  // console.log(setDisplay.setDisplay)
+  if(setDisplay.number === '0') {
     return (
       <>
-        {<button className='zero'>{props.number}</button>}
+        {<button className='zero' onClick={setDisplay.setDisplay}>{setDisplay.number}</button>}
       </>
     );
   }else {
@@ -13,7 +14,7 @@ const NumberButton = (props) => {
       <>
         {/* Display a button element rendering the data being passed down from the parent container 
         on props */}
-        {<button className='numbers'>{props.number}</button>}
+        {<button className='numbers' onClick={setDisplay.setDisplay}>{setDisplay.number}</button>}
       </>
     );
   }
