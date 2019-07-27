@@ -1,4 +1,5 @@
 import React from "react";
+import './Display.css';
 
 import logo from "../../Img/Lambda_Logo_white.png";
 
