@@ -8,6 +8,7 @@ import Specials from './components/ButtonComponents/SpecialButtons/Specials';
 import Display from './components/DisplayComponents/Display';
 // Logo has already been provided for you. Do the same for the remaining components
 import Logo from "./components/DisplayComponents/Logo";
+import { evaluate } from 'mathjs';
 
 function App() {
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
@@ -22,8 +23,12 @@ function App() {
   };
 
   const zeroDisplay = () => {
-    setDisplay('')
-  }
+    setDisplay('');
+  };
+
+  const setResult = () => {
+    setDisplay(`${evaluate(display)}`);
+  };
 
   return (
     <div className="container">
@@ -33,10 +38,10 @@ function App() {
         <Display props={display}/>
         <div className='buttons'>
           <div className='snumbers'>
-            <Specials setDisplayZero={zeroDisplay}/>
+            <Specials setDisplayZero={zeroDisplay} setDisplay={addToDisplay}/>
             <Numbers setDisplay={addToDisplay}/>
           </div>
-          <Operators setDisplay={addToDisplay}/>
+          <Operators setDisplay={addToDisplay} setResult={setResult}/>
         </div>
       </div>
     </div>
