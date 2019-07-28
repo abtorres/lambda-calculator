@@ -2,11 +2,15 @@ import React from "react";
 import './Numbers.css';
 
 const NumberButton = (setDisplay) => {
-  // console.log(setDisplay.setDisplay)
+  // console.log(setDisplay.number)
+  const handleAddToEquation = () => {
+    setDisplay.setDisplay(setDisplay.number);
+  };
+
   if(setDisplay.number === '0') {
     return (
       <>
-        {<button className='zero' onClick={setDisplay.setDisplay}>{setDisplay.number}</button>}
+        {<button className='zero' onClick={handleAddToEquation}>{setDisplay.number}</button>}
       </>
     );
   }else {
@@ -14,7 +18,7 @@ const NumberButton = (setDisplay) => {
       <>
         {/* Display a button element rendering the data being passed down from the parent container 
         on props */}
-        {<button className='numbers' onClick={setDisplay.setDisplay}>{setDisplay.number}</button>}
+        {<button className='numbers' onClick={handleAddToEquation}>{setDisplay.number}</button>}
       </>
     );
   }

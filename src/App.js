@@ -17,6 +17,14 @@ function App() {
   // Don't forget to pass the functions (and any additional data needed) to the components as props
   const [display, setDisplay] = useState('');
 
+  const addToDisplay = value => {
+    setDisplay(display.concat(value));
+  };
+
+  const zeroDisplay = () => {
+    setDisplay('')
+  }
+
   return (
     <div className="container">
       <Logo />
@@ -25,10 +33,10 @@ function App() {
         <Display props={display}/>
         <div className='buttons'>
           <div className='snumbers'>
-            <Specials />
-            <Numbers setDisplay={() => setDisplay(display.concat('v'))}/>
+            <Specials setDisplayZero={zeroDisplay}/>
+            <Numbers setDisplay={addToDisplay}/>
           </div>
-          <Operators />
+          <Operators setDisplay={addToDisplay}/>
         </div>
       </div>
     </div>
