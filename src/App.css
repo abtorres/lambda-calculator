@@ -1,0 +1,10 @@
+.container {
+    background-color: crimson;
+    width: 350px;
+    height: fit-content;
+    border-radius: 20px;
+}
+
+.buttons {
+    display: flex;
+}
